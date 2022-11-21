@@ -1,0 +1,96 @@
+Kubernetes : kubernetes is also known as K8s.Because there are 8 charcters between K and s.
+
+
+---> Kubernetes is a container management tool or container orchestration tool.
+
+---> It is developed by google and later donated to CNCF.(Cloud Native Computing Foundation)
+
+---> It is an open source and written in GO language.
+
+
+What is Container orchestration tool
+-------------------------------------
+
+---> Container orchestration tool manages the containerized applications.
+
+---> Container orchestration tool or engine automates deploying,scaling,load balancing and managing containerized application on a  group of servers.
+
+---> Actions done by container orchestration tool are:-
+
+1. Deploying
+2. Scheduling
+3. Scaling
+4. Load Balancing
+5. Batch execution
+6. Roll Backs
+7. Monitoring
+
+
+Features of kubernetes :-
+------------------------
+1. Automatic Bin Packing
+2. Service Discovery & Load Balancing
+3. Storage Orchestration
+4. Self Healing
+
+Automatic Bin Packing :-
+-----------------------
+
+---> Kubernetes will take care of packaging these jobs(containers) in bins(Servers) in the most efficient way.
+
+---> Kubernetes automatically packages your application and schedules the container based on the requirements and resources available.
+
+---> Kubernetes Automatically places containers based on their resource requirements like CPU & RAM, while not sacrificing availability saves resources.
+
+---> We have a option to specify a pod, so you can optionally specify how much CPU & RAM each container needs. When containers have resource requests specified, the scheduler can make better decisions about which nodes to place pods on.
+
+
+Pods & Nodes :-
+---------------
+
+---> In kubernetes we cannot intract with containers directly, The containers are wraped inside the pods.
+
+---> The pod can contain single container or multiple containers.
+
+---> The pods are housed inside the nodes.
+
+---> A node can contain single pod or multiple podes.
+
+---> A pod contains storage resorces.
+
+---> kubernetes Provides the unique IP address to each and every Pod.
+
+
+Service Discovery & Load Balancing :-
+-------------------------------------
+
+---> Pods receive thier own IP addresses from kubernetes,with it assigns a single domain name system (DNS) name to a set of containers to aid in load balancing requests across the containers of the set.
+
+---> Pods that have same set of functions are abstracted into sets, called services.
+
+---> A kubernetes service is a set of pods that work together.
+
+---> Kubernetes gives pods their own IP addresses and a single DNS name for set of pods and can load-balance across them.
+
+---> By considering above point, kubernetes has control over network and communication between pods and can load balance across them.
+
+Storage Orchestration :-
+-----------------------
+
+---> kuberenetes allows to select the storage system of your choice. you can either opt for local storage, or choose a public cloud provider such as AWS or perhaps use a shared network storage system such as NFS ETC.
+
+---> Containers running inside a pod may need to store the data.
+
+---> Pods can have a storage volumes.
+
+
+Self Healing :-
+--------------
+
+1. If a container fails ---> It restarts the container.
+
+2. If node dies ---> Replaces and Reschedule containers on other nodes.
+
+3. If container does not respond to user defined health check ---> It kills the container.
+
+---> This processes are take care by Replication controller.
